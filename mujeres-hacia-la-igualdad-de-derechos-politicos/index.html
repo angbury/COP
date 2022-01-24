@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<title></title>
+	<style>
+		#scrolly {
+			position: relative;
+			background-color: #f3f3f3;
+			padding: 1rem;
+		}
+
+		article {
+			position: relative;
+			padding: 0;
+			max-width: 60rem;
+			margin: 0 auto;
+		}
+
+		figure {
+			position: -webkit-sticky;
+			position: sticky;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			background-color: #7bb23200;
+			z-index: 0;
+		}
+
+		figure p {
+			text-align: center;
+			padding: 1rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			font-size: 8rem;
+			font-weight: 900;
+			color: #AF95CC;
+		}
+
+		.step {
+			margin: 0 auto 2rem auto;
+			color: #fff;
+			background-color: rgba(0, 0, 0, 0);
+		}
+
+		.step:last-child {
+			margin-bottom: 0;
+		}
+
+		.step.is-active p {
+			color: #3b3b3b;
+		}
+
+		.step p {
+			text-align: center;
+			padding: 1rem;
+			font-size: 1.5rem;
+			color: #3b3b3b00;
+			transition: 0.5s;
+		}
+
+		.accordion-button:not(.collapsed){
+			color: inherit;
+			background: #eee; 
+		}
+
+		.accordion-button:focus{
+			box-shadow: inherit;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<section id="intro">
+			<div class="card">
+				<img src="header.jpg" class="img-fluid" alt="Responsive image" style="opacity: 0.3; transition: 1s;">
+				<div class="card-img-overlay modal-dialog-centered text-center">
+					<h1 class="display-3" style="color: #574A66; font-weight: 700;">LA LUCHA DE LAS MUJERES POR UN
+						ESPACIO EN LA ARENA
+						POLÍTICA</h1>
+				</div>
+			</div>
+
+			<div class="container" style="padding-bottom: 1rem; padding-top: 1rem;">
+				<div class="card" style="width: 100%; background-color: #AF95CC; padding: 0.5em;">
+					<div class="card-body" style="color: #f3f3f3;">
+						<h5 class="card-title">HACIA LA IGUALDAD DE DERECHOS POLÍTICOS</h5>
+						<p class="card-text">El 8 de marzo, Día Internacional de la Mujer, conmemora las constantes
+							luchas de las mujeres por
+							una participación igualitaria y justa en la sociedad.</p>
+						<p class="card-text">Entre las diferentes batallas laborales, culturales y políticas para tener
+							las mismas condiciones
+							de igualdad que los hombres, en esta ocasión, presentamos el recorrido de las mujeres para
+							ser
+							incluidas en la esfera política, en particular el derecho a ocupar cargos de elección
+							popular .</p>
+						<p class="card-text">En este ejercicio encontrarás los cambios en la representación que han
+							tenido las mujeres en
+							poder legislativo mexicano a partir de las distintas políticas establecidas.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="scrolly">
+			<figure>
+				<p>1952</p>
+				<div class="progress" style="height: 2rem;">
+					<!-- b_1.style("width", el.dataset.unob); -->
+					<div class="progress-bar" id="buno" role="progressbar"
+						style="width: 50%; background-color: #907BA8; height: 2rem; transition: 1s;">
+						<label>Diputadas</label>
+					</div>
+					<div class="progress-bar" id="bdos" role="progressbar"
+						style="width: 50%; background-color: #574A66; height: 2rem; transition: 1s;">
+						<label>Senadoras</label>
+					</div>
+				</div>
+
+			</figure>
+
+			<article>
+				<div class="step" data-step="1952" data-pord="8%" data-pors="0%" data-etid="0.6% Diputadas"
+					data-etis="0% Senadoras">
+					<p>Primera Diputada Federal</p>
+					<p>En 1952 Adolfo Ruiz Cortinez, presidente de México decretó el derecho de las mujeres a votar y
+						ser electas en todas las elecciones populares.</p>
+				</div>
+				<div class="step" data-step="1955" data-pord="8%" data-pors="0%" data-etid="2.5% Diputadas"
+					data-etis="0% Senadoras">
+					<p>En las primeras elecciones donde las mujeres emitieron su voto, fue para elegir diputaciones
+						federales de la XLIII Legislatura (1955-1958). Resultaron electas: Remedios Albertina Ezeta, por
+						el Estado de México; Margarita García Flores, por Nuevo León; Guadalupe Ursúa Flores, por
+						Jalisco, y Marcelina Galindo Arce, por Chiapas</p>
+				</div>
+				<div class="step" data-step="1958" data-pord="8%" data-pors="0%" data-etid="4.9% Diputadas"
+					data-etis="0% Senadoras">
+					<p>Macrina Rabadán se convirtió en la primera diputada propietaria opositora por el Partido Popular
+						Socialista en la XLIV Legislatura (1958-1961). Logró posicionar a otra mujer como suplente.</p>
+				</div>
+				<div class="step" data-step="1961" data-pord="8%" data-pors="9%" data-etid="4.9% Diputadas"
+					data-etis="6.2% Senadoras">
+					<p></p>
+				</div>
+				<div class="step" data-step="1964" data-pord="8%" data-pors="9%" data-etid="5.2% Diputadas"
+					data-etis="6.2% Senadoras">
+					<p>Alicia Arellano Tapia. Primera Senadora</p>
+				</div>
+				<div class="step" data-step="1967" data-pord="8%" data-pors="0%" data-etid="5.7% Diputadas"
+					data-etis="0% Senadoras">
+					<p>Alicia Arellano Tapia Legislaturas XLVI (1964-1967) y María Lavalle Urbina XLVII (1967-1970)
+						fueron las primeras senadoras de México representando a Sonora y Campeche, respectivamente.
+						María Lavalle Urbina, llegó a ser presidenta del Senado.</p>
+				</div>
+				<div class="step" data-step="1970" data-pord="12%" data-pors="8%" data-etid="10% Diputadas"
+					data-etis="6.6% Senadoras">
+					<p></p>
+				</div>
+				<div class="step" data-step="1973" data-pord="8%" data-pors="0%" data-etid="8.2% Diputadas"
+					data-etis="0% Senadoras">
+					<p></p>
+				</div>
+				<div class="step" data-step="1976" data-pord="13%" data-pors="9%" data-etid="12.5% Diputadas"
+					data-etis="8.9% Senadoras">
+					<p></p>
+				</div>
+				<div class="step" data-step="1979" data-pord="0%" data-pors="8%" data-etid="0% Diputadas"
+					data-etis="8% Senadoras">
+					<p>Griselda Álvarez Ponce de León se convirtió en la primera mujer gobernadora de la República
+						Mexicana. Ocupó la gubernatura de Colima hasta 1985</p>
+				</div>
+				<div class="step" data-step="1982" data-pord="32%" data-pors="11%" data-etid="31.3% Diputadas"
+					data-etis="10.5% Senadoras">
+					<p></p>
+				</div>
+				<div class="step" data-step="1985" data-pord="11%" data-pors="0%" data-etid="10.5% Diputadas"
+					data-etis="0% Senadoras">
+					<p></p>
+				</div>
+				<div class="step" data-step="1988" data-pord="15%" data-pors="11%" data-etid="11.6% Diputadas"
+					data-etis="11.8% Senadoras">
+					<p>Rosario Ibarra fue la primera candidata presidencial en la historia de México, fue postulada por
+						el desaparecido Partido Revolucionario de los Trabajadores. En 1988 fue propuesta por segunda
+						ocasión.</p>
+				</div>
+				<div class="step" data-step="1991" data-pord="0%" data-pors="9%" data-etid="0% Diputadas"
+					data-etis="8.8% Senadoras">
+					<p></p>
+				</div>
+				<div class="step" data-step="1994" data-pord="10%" data-pors="14%" data-etid="10.2% Diputadas"
+					data-etis="14.1% Senadoras">
+					<p>En 1993 La Cámara de Diputados aprobó la reforma al artículo 115 del Código Federal de
+						Instituciones y Procedimientos Electorales (COFIPE), en la que se conminaba a los partidos
+						políticos a promover una mayor participación política de las mujeres.</p>
+				</div>
+				<div class="step" data-step="1997" data-pord="0%" data-pors="17%" data-etid="0% Diputadas"
+					data-etis="17.4% Senadoras">
+					<p>La Cámara de Diputados aprobó la reforma al artículo 1° del Código Federal de Instituciones y
+						Procedimientos Electorales, que señala que las candidaturas a diputados y senadores no excedan
+						el 70% para un mismo género.</p>
+				</div>
+				<div class="step" data-step="2000" data-pord="18%" data-pors="16%" data-etid="18% Diputadas"
+					data-etis="16% Senadoras">
+					<p></p>
+				</div>
+				<div class="step" data-step="2003" data-pord="24%" data-pors="0%" data-etid="24% Diputadas"
+					data-etis="0% Senadoras">
+					<p>En 2002 nuevas reformas al COFIPE, obliga a los partidos políticos a inscribir por lo menos el
+						30% de las candidaturas femeninas en las listas a puestos de elección popular en calidad de
+						propietarias; además de asegurar en las listas plurinominales una mujer por cada tres hombres.
+					</p>
+				</div>
+				<div class="step" data-step="2006" data-pord="18%" data-pors="23%" data-etid="18.8% Diputadas"
+					data-etis="23.4% Senadoras">
+					<p>El 2 de agosto de 2006, se publicó en el Diario Oficial de la Federación, la Ley General para la
+						Igualdad entre Mujeres y Hombres, que tiene por objeto regular y garantizar la igualdad de
+						oportunidades y de trato entre mujeres y hombres.</p>
+				</div>
+				<div class="step" data-step="2009" data-pord="31%" data-pors="0%" data-etid="31.8% Diputadas"
+					data-etis="0% Senadoras">
+					<p>En 2008 una reforma del COFIPE establece la cuota de género en proporción 40% 60%</p>
+				</div>
+				<div class="step" data-step="2012" data-pord="33%" data-pors="42%" data-etid="32.8% Diputadas"
+					data-etis="41.4% Senadoras">
+					<p></p>
+				</div>
+				<div class="step" data-step="2015" data-pord="42%" data-pors="0%" data-etid="42.8% Diputadas"
+					data-etis="0% Senadoras">
+					<p>El 31 de enero de 2014, se promulgó la reforma político-electoral del artículo 41 de la
+						Constitución, que eleva a rango constitucional, la garantía de la paridad entre mujeres y
+						hombres en las candidaturas a la Cámara de Diputados, Senado y Congresos Estatales.</p>
+				</div>
+				<div class="step" data-step="2018" data-pord="50%" data-pors="48%" data-etid="49.2% Diputadas"
+					data-etis="48.2% Senadoras">
+					<p></p>
+				</div>
+			</article>
+		</section>
+		<section id="outro">
+			<div class="card">
+				<img src="footer.jpg" class="img-fluid" alt="Responsive image" style="opacity: 0.3; transition: 1s;">
+				<div class="card-img-overlay modal-dialog-centered text-center">
+				</div>
+			</div>
+
+			<div class="container" style="padding-bottom: 1rem; padding-top: 1rem;">
+				<div class="card" style="width: 100%; background-color: #AF95CC; padding: 0.5em;">
+					<div class="card-body" style="color: #f3f3f3;">
+						<h5 class="card-title">LOGROS A NIVEL LOCAL</h5>
+						<p class="card-text">El involucramiento de las mujeres en la vida política de México empezó a
+							nivel local. Entre 1923 y 1925 en Chiapas, Yucatán y Tabasco se concedió la igualdad
+							política a la mujer para votar y ser votada en puestos de representación popular. Elvia
+							Carrillo Puerto fue la primera candidata electa al Congreso de Yucatán en 1923, designación
+							que abandonó dos años más tarde por amenazas de muerte.</p>
+						<p class="card-text">Si bien, la participación política de las mujeres encontró tempranamente
+							espacios en las legislaturas locales, no es poco frecuente encontrar retrocesos en años
+							posteriores.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- Inicia Ploty -->
+	<div class="container">
+		<div class="showcase__section" id="bubble">
+			<div class="spacer --small"></div>
+			<div id="bubbleplots">
+				<div class="bubbleplot" data-num="0">
+					<div class="control-row">
+						<h5>Selecciona una entidad:</h5>
+						<select class="countrydata form-select">
+						</select>
+					</div>
+					<div class="plot" id="plotdiv"></div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			Plotly.d3.csv('https://raw.githubusercontent.com/angbury/COP/main/cvs/legislaturaslocales.csv', function (err, rows) {
+
+				function unpack(rows, key) {
+					return rows.map(function (row) { return row[key]; });
+				}
+
+				var allCountryNames = unpack(rows, 'entidad'),
+					allYear = unpack(rows, 'periodo'),
+					allGdp = unpack(rows, 'mujeres'),
+					listofCountries = [],
+					currentCountry,
+					currentGdp = [],
+					currentYear = [];
+
+				for (var i = 0; i < allCountryNames.length; i++) {
+					if (listofCountries.indexOf(allCountryNames[i]) === -1) {
+						listofCountries.push(allCountryNames[i]);
+					}
+				}
+
+				function getCountryData(chosenCountry) {
+					currentGdp = [];
+					currentYear = [];
+					for (var i = 0; i < allCountryNames.length; i++) {
+						if (allCountryNames[i] === chosenCountry) {
+							currentGdp.push(allGdp[i]);
+							currentYear.push(allYear[i]);
+						}
+					}
+				};
+
+				// Default Country Data
+				setBubblePlot('Aguascalientes');
+
+				function setBubblePlot(chosenCountry) {
+					getCountryData(chosenCountry);
+
+					var trace1 = {
+						x: currentYear,
+						y: currentGdp,
+						mode: 'lines+markers',
+						marker: {
+							color: '#AF95CC',
+							size: 12,
+							opacity: 0.5
+						}
+					};
+
+					var data = [trace1];
+
+					var layout = {
+						title: 'Porcentaje de mujeres por período legislativo en <br>' + chosenCountry
+					};
+					var config = { responsive: true }
+
+					Plotly.newPlot('plotdiv', data, layout, config);
+				};
+
+				var innerContainer = document.querySelector('[data-num="0"'),
+					plotEl = innerContainer.querySelector('.plot'),
+					countrySelector = innerContainer.querySelector('.countrydata');
+
+				function assignOptions(textArray, selector) {
+					for (var i = 0; i < textArray.length; i++) {
+						var currentOption = document.createElement('option');
+						currentOption.text = textArray[i];
+						selector.appendChild(currentOption);
+					}
+				}
+
+				assignOptions(listofCountries, countrySelector);
+
+				function updateCountry() {
+					setBubblePlot(countrySelector.value);
+				}
+
+				countrySelector.addEventListener('change', updateCountry, false);
+			});
+		</script>
+		<!-- Fin Ploty -->
+		<div class="card" style="width: 100%; background-color: #AF95CC; padding: 0.5em;">
+			<div class="card-body" style="color: #f3f3f3;">
+				<!-- <h5 class="card-title">LOGROS A NIVEL LOCAL</h5> -->
+				<p class="card-text">A la par de reconocer los avances con las reformas políticas en materia electoral
+					para propiciar la paridad de género en las cámaras legislativas, hay trabajo pendiente para
+					garantizar que los puestos de representación popular en el poder legislativo ganados por las mujeres
+					sean respetados y no exista simulación. Respetar estos triunfos de las mujeres sería el comienzo del
+					reconocimiento de su participación en la arena política.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" style="padding-bottom: 1rem; padding-top: 1rem;">
+		<hr>
+		<div class="accordion accordion-flush" id="accordionFlushExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="flush-headingOne">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+						FUENTES
+					</button>
+				</h2>
+				<div id="flush-collapseOne" class="acordion " aria-labelledby="flush-headingOne"
+					data-bs-parent="#accordionFlushExample">
+					<div class="accordion-body">
+						Camara de Diputados - Centro de Estudios para el Adelanto de las Mujeres y la Equidad de Género 
+						<a href="http://archivos.diputados.gob.mx/Centros_Estudio/ceameg/participacion_politica/sipp3_2/indice.html" class="link-secondary">
+						(CEAMEG)
+					</a></div>
+					<div class="accordion-body">
+						En los casos que no se encontró información de alguna legislatura estatal se recurrió la base de datos Mujeres Electas del INE
+						<a href="https://igualdad.ine.mx/mujeres-en-la-politica/mujeres-electas/" class="link-secondary">
+						Mujeres Electas del INE
+					</a></div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+	<script src="https://unpkg.com/scrollama"></script>
+	<script>
+		// using d3 for convenience
+		var main = d3.select("main");
+		var scrolly = main.select("#scrolly");
+		var figure = scrolly.select("figure");
+		var b_1 = figure.select("#buno");
+		var b_2 = figure.select("#bdos");
+		var article = scrolly.select("article");
+		var step = article.selectAll(".step");
+
+		// initialize the scrollama
+		var scroller = scrollama();
+
+		// generic window resize listener event
+		function handleResize() {
+			// 1. update height of step elements
+			var stepH = Math.floor(window.innerHeight * 0.25);
+			step.style("height", stepH + "px");
+
+			var figureHeight = window.innerHeight / 2;
+			var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+
+			figure
+				.style("height", figureHeight + "px")
+				.style("top", figureMarginTop + "px");
+
+			// 3. tell scrollama to update new element dimensions
+			scroller.resize();
+		}
+
+		// scrollama event handlers
+		function handleStepEnter(response) {
+			console.log(response);
+			// response = { element, direction, index }
+
+			// add color to current step only
+			step.classed("is-active", function (d, i) {
+				return i === response.index;
+			});
+			var el = response.element;
+			// update graphic based on step
+			// figure.select("p").text("CAMBIO " + (response.index + 1));
+			figure.select("p").text(el.dataset.step);
+			// figure.style("background-color", el.dataset.color);
+			b_1.style("width", el.dataset.pord);
+			b_1.select("label").text(el.dataset.etid);
+			b_2.style("width", el.dataset.pors);
+			b_2.select("label").text(el.dataset.etis);
+		}
+
+		function setupStickyfill() {
+			d3.selectAll(".sticky").each(function () {
+				Stickyfill.add(this);
+			});
+		}
+
+		function init() {
+			setupStickyfill();
+
+			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
+			handleResize();
+
+			// 2. setup the scroller passing options
+			// 		this will also initialize trigger observations
+			// 3. bind scrollama event handlers (this can be chained like below)
+			scroller
+				.setup({
+					step: "#scrolly article .step",
+					offset: 0.8,
+					debug: false
+				})
+				.onStepEnter(handleStepEnter);
+		}
+
+		// kick things off
+		init();
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
