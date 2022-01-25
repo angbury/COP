@@ -70,12 +70,12 @@
 			transition: 0.5s;
 		}
 
-		.accordion-button:not(.collapsed){
+		.accordion-button:not(.collapsed) {
 			color: inherit;
-			background: #eee; 
+			background: #eee;
 		}
 
-		.accordion-button:focus{
+		.accordion-button:focus {
 			box-shadow: inherit;
 		}
 	</style>
@@ -118,7 +118,6 @@
 			<figure>
 				<p>1952</p>
 				<div class="progress" style="height: 2rem;">
-					<!-- b_1.style("width", el.dataset.unob); -->
 					<div class="progress-bar" id="buno" role="progressbar"
 						style="width: 50%; background-color: #907BA8; height: 2rem; transition: 1s;">
 						<label>Diputadas</label>
@@ -320,7 +319,7 @@
 					}
 				};
 
-				// Default Country Data
+				//Entidad default
 				setBubblePlot('Aguascalientes');
 
 				function setBubblePlot(chosenCountry) {
@@ -371,7 +370,6 @@
 		<!-- Fin Ploty -->
 		<div class="card" style="width: 100%; background-color: #AF95CC; padding: 0.5em;">
 			<div class="card-body" style="color: #f3f3f3;">
-				<!-- <h5 class="card-title">LOGROS A NIVEL LOCAL</h5> -->
 				<p class="card-text">A la par de reconocer los avances con las reformas políticas en materia electoral
 					para propiciar la paridad de género en las cámaras legislativas, hay trabajo pendiente para
 					garantizar que los puestos de representación popular en el poder legislativo ganados por las mujeres
@@ -394,25 +392,30 @@
 				<div id="flush-collapseOne" class="acordion " aria-labelledby="flush-headingOne"
 					data-bs-parent="#accordionFlushExample">
 					<div class="accordion-body">
-						Camara de Diputados - Centro de Estudios para el Adelanto de las Mujeres y la Equidad de Género 
-						<a href="http://archivos.diputados.gob.mx/Centros_Estudio/ceameg/participacion_politica/sipp3_2/indice.html" class="link-secondary">
-						(CEAMEG)
-					</a></div>
+						Camara de Diputados - Centro de Estudios para el Adelanto de las Mujeres y la Equidad de Género
+						<a href="http://archivos.diputados.gob.mx/Centros_Estudio/ceameg/participacion_politica/sipp3_2/indice.html"
+							class="link-secondary">
+							(CEAMEG)
+						</a>
+					</div>
 					<div class="accordion-body">
-						En los casos que no se encontró información de alguna legislatura estatal se recurrió la base de datos Mujeres Electas del INE
-						<a href="https://igualdad.ine.mx/mujeres-en-la-politica/mujeres-electas/" class="link-secondary">
-						Mujeres Electas del INE
-					</a></div>
-				</div>
+						En los casos que no se encontró información de alguna legislatura estatal se recurrió la base de
+						datos Mujeres Electas del INE
+						<a href="https://igualdad.ine.mx/mujeres-en-la-politica/mujeres-electas/"
+							class="link-secondary">
+							Mujeres Electas del INE
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 
 	<script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
 	<script src="https://unpkg.com/scrollama"></script>
 	<script>
-		// using d3 for convenience
+		// usando d3 por conveniencia
 		var main = d3.select("main");
 		var scrolly = main.select("#scrolly");
 		var figure = scrolly.select("figure");
@@ -421,12 +424,11 @@
 		var article = scrolly.select("article");
 		var step = article.selectAll(".step");
 
-		// initialize the scrollama
+		// iscrollama
 		var scroller = scrollama();
 
-		// generic window resize listener event
 		function handleResize() {
-			// 1. update height of step elements
+			// 1. actualizar la altura de los elementos del step
 			var stepH = Math.floor(window.innerHeight * 0.25);
 			step.style("height", stepH + "px");
 
@@ -437,24 +439,22 @@
 				.style("height", figureHeight + "px")
 				.style("top", figureMarginTop + "px");
 
-			// 3. tell scrollama to update new element dimensions
+			// 3. decirle a scrollama que actualice las dimensiones de los nuevos elementos
 			scroller.resize();
 		}
 
 		// scrollama event handlers
 		function handleStepEnter(response) {
 			console.log(response);
-			// response = { element, direction, index }
 
-			// add color to current step only
+
+			// step actual
 			step.classed("is-active", function (d, i) {
 				return i === response.index;
 			});
 			var el = response.element;
-			// update graphic based on step
-			// figure.select("p").text("CAMBIO " + (response.index + 1));
+			// actualizar gráfico basado en step
 			figure.select("p").text(el.dataset.step);
-			// figure.style("background-color", el.dataset.color);
 			b_1.style("width", el.dataset.pord);
 			b_1.select("label").text(el.dataset.etid);
 			b_2.style("width", el.dataset.pors);
@@ -470,12 +470,12 @@
 		function init() {
 			setupStickyfill();
 
-			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
+			// 1. fuerce un cambio de tamaño en la carga para garantizar que se envíen las dimensiones adecuadas a scrollama
 			handleResize();
 
-			// 2. setup the scroller passing options
-			// 		this will also initialize trigger observations
-			// 3. bind scrollama event handlers (this can be chained like below)
+			// 2. configura las opciones de paso del scroller
+			// esto también inicializará las observaciones desencadenantes
+			// 3. vincular los controladores de eventos de scrollama (esto se puede encadenar como se muestra a continuación)
 			scroller
 				.setup({
 					step: "#scrolly article .step",
@@ -485,12 +485,11 @@
 				.onStepEnter(handleStepEnter);
 		}
 
-		// kick things off
+		// hacerlo
 		init();
 	</script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		crossorigin="anonymous"></script>
 </body>
-
 </html>
